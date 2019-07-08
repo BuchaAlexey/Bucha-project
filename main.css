@@ -1,0 +1,174 @@
+
+* {
+    animation-play-state: inherit;
+    animation-fill-mode: forwards;
+    animation-duration: inherit;
+}
+
+#canvas {
+    background-image: url("./images/background.png");
+    margin: 0 50px;
+    width: 400px;
+    height: 600px;
+
+}
+header {
+    display: flex;
+    padding: 0 100px;
+}
+
+.profile-links *:hover {
+    opacity: 0.8;
+}
+
+.linkedin {
+    height: 80px;
+    position: absolute;
+    right: 20px;
+}
+
+
+h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #A51834;
+    text-align: center;
+    font-size: 46px;
+    margin: auto;
+}
+
+h2 {
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #A51834;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+body {
+    background: #D1F2F2;
+    background: -webkit-linear-gradient(top left, #D1F2F2, #4ca2cd);
+    background: -o-linear-gradient(#D1F2F2, #4ca2cd);
+    background: -moz-linear-gradient(#D1F2F2, #4ca2cd);
+    background: linear-gradient(#D1F2F2, #4ca2cd);
+}
+
+
+
+.background {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+@keyframes change {
+    100% {bottom: 30px;}
+
+}
+.ship {
+    height: 200px;
+    margin: auto;
+    position: relative;
+    bottom: -50px;
+    animation-name: change;
+}
+
+.ship:hover {
+    opacity: 0.6;
+}
+
+.left {
+    animation-name: show-text;
+    animation-duration: 3s;
+    animation-play-state: paused;
+    width: 310px;
+}
+
+
+.left:hover {
+    animation-play-state: running;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-bottom:125px solid transparent;
+    position: relative;
+    bottom: 80px;
+    animation-name: show-triangle;
+}
+
+@keyframes show-info {
+    100% {
+        color: black;
+        background-color: rgba(353, 92, 45, 0.7);
+    }
+}
+
+@keyframes show-triangle {
+    100% {border-bottom:125px solid rgba(353, 92, 45, 0.7);}
+}
+
+.rules {
+    margin: 0;
+    margin: auto;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 18px;
+    max-width: 250px;
+    text-align: center;
+    color: transparent;
+    background-color: transparent;
+    position: relative;
+    bottom: 80px;
+    animation-name: show-info;
+}
+
+
+.themes {
+    width: 310px;
+}
+
+#doodle {
+    height: 150px;
+    margin: 0 90px;
+}
+
+#spongebob {
+    height: 150px;
+    position: relative;
+    left: 10px;
+    margin: 0 90px;
+}
+
+#doodle:hover {
+    opacity: 0.6;
+}
+
+#spongebob:hover {
+    opacity: 0.6;
+}
+
+@media (max-width: 1200px) {
+    .background {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .background {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .background * {
+        margin: auto;
+    }
+    h1 {
+        padding: 0 20px;
+    }
+
+    #canvas {
+        margin: auto;
+        order: -1;
+    }
+}
